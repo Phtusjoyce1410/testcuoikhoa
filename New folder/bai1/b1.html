@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+</head>
+<body>
+    <script>
+        let arr1, arr2, i = 0, j, k, l = 0, A, B;
+            do {
+                while (i > 0) {
+                    arr1 = prompt("nhap lai so thu nhat la so nguyen duong:", "");
+                    arr2 = prompt("nhap lai so thu hai la so nguyen duong:", "");
+                    break;
+                }
+                while (i == 0) {
+                    arr1 = prompt("nhap so thu nhat la so nguyen duong:", "");
+                    arr2 = prompt("nhap so thu hai la so nguyen duong:", "");
+                    i++;
+                }
+            } while (arr1 < 0 || arr2 < 0)
+
+            arr1 = Number(arr1);
+            arr2 = Number(arr2);
+
+            if (arr1 > arr2) {
+                B = arr1; A = arr2;
+            } else {
+                B = arr2; A = arr1;
+            }
+            for (j = A; j <= B; j++) {
+                l = 0;
+                for (k = 2; k <= j / 2; k++) {
+                    if (j % k == 0) {
+                        l++;
+                    }
+                }
+                if (l == 0) {
+                    console.log(j);
+                }
+            }
+    </script>       
+    </script>
+</body>
+</html>
